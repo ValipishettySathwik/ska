@@ -6,10 +6,13 @@ const cors = require("cors");
 const app = express();
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/RESPONSE", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://valipishettysunny:sathwik%402003@cluster2.eizpo.mongodb.net/RESPONSE",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+  )
   .then(() => console.log("Connected successfully to MongoDB"))
   .catch((error) => console.log("MongoDB connection error:", error));
 
